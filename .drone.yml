@@ -2,6 +2,8 @@ kind: pipeline
 type: kubernetes
 name: default
 
+# trigger
+
 #platform:
 #  os: linux
 #  arch: arm64
