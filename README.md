@@ -1,3 +1,3 @@
 # drone-testing
 
-testing repo
+testing
