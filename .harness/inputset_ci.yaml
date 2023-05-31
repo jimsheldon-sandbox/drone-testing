@@ -8,7 +8,7 @@ pipeline:
         codebase:
           build: <+input>
           connectorRef: account.Jim_Sheldon_GitHub
-          repoName: jimsheldon-sandbox/drone-testing
+          repoName: drone-testing
     
    stages:
       - stage:
