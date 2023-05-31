@@ -1,0 +1,15 @@
+inputSet:
+  name: New Push
+  identifier: New_Push
+  orgIdentifier: jimexample
+  projectIdentifier: drone_testing
+  pipeline:
+    identifier: drone_testing
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: main
+  object Object: pipeline.properties.ci.codebase
