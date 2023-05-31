@@ -1,7 +1,0 @@
-inputSet:
-  identifier: "pull_request"
-  name: "Pull Request"
-  orgIdentifier: "jimexample"
-  projectIdentifier: "drone_testing"
-  pipeline:
-    identifier: "drone_testing"
