@@ -8,7 +8,7 @@ pipeline:
         codebase:
           build: <+input>
           connectorRef: account.Jim_Sheldon_GitHub
-          repoName: drone-testing
+          repoName: jimsheldon-sandbox/drone-testing
     
    stages:
       - stage:
@@ -37,6 +37,6 @@ pipeline:
               os: Linux
           type: CI
           when:
-            condition: <+trigger.branch> == "main"
+            condition: <+trigger.branch> == "main" || <+trigger.event> == "PR"
             pipelineStatus: Success
     
