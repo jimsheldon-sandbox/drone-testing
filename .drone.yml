@@ -7,18 +7,11 @@ steps:
   image: busybox
   commands:
   - echo hello world
-  when:
-    event:
-    - push
-    - pull_request
 
 - name: tag
   image: busybox
   commands:
   - echo this is a tag
-  when:
-    event:
-    - tag
 
 trigger:
   branch:
