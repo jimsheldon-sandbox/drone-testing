@@ -1,0 +1,51 @@
+pipeline:
+   name: drone-testing
+   identifier: drone_testing
+   projectIdentifier: drone_testing
+   orgIdentifier: jimexample
+   properties:
+      ci:
+        codebase:
+          build: <+input>
+          connectorRef: account.Jim_Sheldon_GitHub
+          repoName: drone-testing
+    
+   stages:
+      - stage:
+          identifier: default
+          name: default
+          spec:
+            cloneCodebase: true
+            execution:
+              steps:
+              - step:
+                  identifier: hello
+                  name: hello
+                  spec:
+                    command: echo hello world
+                    connectorRef: account.Jim_Sheldon
+                    image: busybox
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: tag
+                  name: tag
+                  spec:
+                    command: echo this is a tag
+                    connectorRef: account.Jim_Sheldon
+                    image: busybox
+                  timeout: ""
+                  type: Run
+            infrastructure:
+              spec:
+                connectorRef: account.macbook91
+                namespace: harness-delegate-ng
+              type: KubernetesDirect
+            platform:
+              arch: Amd64
+              os: Linux
+          type: CI
+          when:
+            condition: <+trigger.branch> == "main" && (<+trigger.event> == "PR")
+            pipelineStatus: Success
+    
