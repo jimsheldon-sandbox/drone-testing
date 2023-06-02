@@ -46,6 +46,6 @@ pipeline:
               os: Linux
           type: CI
           when:
-            condition: <+trigger.branch> == "main" && (<+trigger.event> == "PR")
+            condition: <+trigger.branch> == "main" || (<+trigger.event> == "PR")
             pipelineStatus: Success
     
