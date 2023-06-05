@@ -12,10 +12,12 @@ steps:
   image: busybox
   commands:
   - echo this is a tag
+  when:
+    event:
+    - tag
 
 trigger:
   branch:
   - main
-  event:
-  - pull_request
+  - refs/tags/v*
   
