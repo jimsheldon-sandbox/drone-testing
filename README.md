@@ -1,3 +1,1 @@
 # drone-testing
-
-trigger
