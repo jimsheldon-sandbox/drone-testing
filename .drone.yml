@@ -11,7 +11,8 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: $MY_SLACK_WEBHOOK
+    webhook:
+      from_secret: MY_SLACK_WEBHOOK
 
 - name: hello
   image: busybox
