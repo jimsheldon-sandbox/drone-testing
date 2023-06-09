@@ -17,17 +17,8 @@ steps:
   image: busybox
   commands:
   - echo hello world
-
-- name: tag
-  image: busybox
-  commands:
-  - echo this is a tag
-  when:
-    event:
-    - tag
-
+ 
 trigger:
   branch:
   - main
-  - refs/tags/v*
   
