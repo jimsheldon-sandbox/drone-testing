@@ -16,10 +16,9 @@ steps:
 
 - name: test slack
   image: plugins/slack
-  environment:
-    SLACK_ACCESS_TOKEN:
-      from_secret: EOIN_SLACK_TOKEN
   settings:
+    access_token:
+      from_secret: EOIN_SLACK_TOKEN
     channel: C05C45H2ATS
     template: basic_success_1
 
