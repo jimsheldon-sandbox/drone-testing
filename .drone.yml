@@ -7,6 +7,12 @@ platform:
   arch: arm64
 
 steps:
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: $MY_SLACK_WEBHOOK
+
 - name: hello
   image: busybox
   commands:
