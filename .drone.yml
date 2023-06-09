@@ -14,13 +14,13 @@ steps:
     webhook:
       from_secret: MY_SLACK_WEBHOOK
 
-- name: eoin slack
+- name: test slack
   image: plugins/slack
-  environment:
-    SLACK_ACCESS_TOKEN:
-      from_secret: EOIN_SLACK_TOKEN
   settings:
+    accessToken:
+      from_secret: EOIN_SLACK_TOKEN
     channel: C05C45H2ATS
+    template: basic_success_1
 
 - name: hello
   image: busybox
