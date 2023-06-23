@@ -11,7 +11,7 @@ steps:
 - name: hello
   image: busybox
   environment:
-    MY_VAR: $DRONE_BUILD_NUMBER-$DRONE_COMMIT_SHA
+    MY_VAR: ${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA}
   commands:
   - env
  
