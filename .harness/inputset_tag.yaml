@@ -1,0 +1,15 @@
+inputSet:
+  identifier: tag
+  name: Tag
+  orgIdentifier: terraform_demo
+  projectIdentifier: drone_testing
+  pipeline:
+    identifier: drone_testing
+    properties:
+      ci:
+        codebase:
+          build:
+            type: tag
+            spec:
+              tag: <+trigger.tag>
+  object Object: pipeline.properties.ci.codebase
