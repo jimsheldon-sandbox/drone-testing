@@ -14,7 +14,8 @@ steps:
 - name: docker
   image: plugins/docker
   repo: foo/bar
-  tags: latest
+  tags:
+  - latest
   username: user
   password: pass
   dry_run: true
