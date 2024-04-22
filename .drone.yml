@@ -7,8 +7,10 @@ steps:
 - name: docker
   image: plugins/kaniko
   settings:
-    repo: foo/bar
-    dry_run: true
+    repo: jimsheldon/drone-testing
+    username: jimsheldon
+    password:
+      from_secret: docker_password
 
 trigger:
   branch:
