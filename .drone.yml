@@ -13,13 +13,13 @@ steps:
 
 - name: docker
   image: plugins/docker
-  repo: foo/bar
-  tags:
-  - latest
-  username: user
-  password: pass
-  auto_tag: true
-  dry_run: true
+  settings:
+    repo: foo/bar
+    tags:
+    - latest
+    username: user
+    password: pass
+    dry_run: true
 
 trigger:
   branch:
