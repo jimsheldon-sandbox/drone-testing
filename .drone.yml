@@ -4,15 +4,8 @@ name: default
 
 steps:
 
-- name: hello
-  image: busybox
-  environment:
-    MY_VAR: ${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA}
-  commands:
-  - env
-
 - name: docker
-  image: plugins/docker
+  image: plugins/kaniko
   settings:
     repo: foo/bar
     dry_run: true
