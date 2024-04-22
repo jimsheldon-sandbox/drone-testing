@@ -15,10 +15,6 @@ steps:
   image: plugins/docker
   settings:
     repo: foo/bar
-    tags:
-    - latest
-    username: user
-    password: pass
     dry_run: true
 
 trigger:
