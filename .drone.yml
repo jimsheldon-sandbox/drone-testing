@@ -10,7 +10,15 @@ steps:
     MY_VAR: ${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA}
   commands:
   - env
- 
+
+- name: docker
+  image: plugins/docker
+  repo: foo/bar
+  tags: latest
+  username: user
+  password: pass
+  dry_run: true
+
 trigger:
   branch:
   - main
