@@ -18,6 +18,7 @@ steps:
   - latest
   username: user
   password: pass
+  auto_tag: true
   dry_run: true
 
 trigger:
